@@ -32,7 +32,7 @@ RUN apt-get update && \
 
 # RUN /bin/bash -c '. /opt/ros/$ROS_DISTRO/setup.bash' && colcon build --symlink-install; colcon build --symlink-install
 # RUN /bin/bash -c '. /opt/ros/$ROS_DISTRO/setup.bash' && colcon build
-# ENV RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+ENV RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
 
 # RUN . /opt/ros/$ROS_DISTRO/setup.bash 
 # export ROS_DOMAIN_ID=9; ros2 launch rmf_demos_gz office.launch.xml headless:=1"

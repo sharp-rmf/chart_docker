@@ -1,22 +1,22 @@
-# FROM ghcr.io/open-rmf/rmf/rmf_demos:latest
-# LABEL ghcr.io/open-rmf/rmf/rmf_demos:latest rmf:latest
+FROM ghcr.io/open-rmf/rmf/rmf_demos:latest
+LABEL ghcr.io/open-rmf/rmf/rmf_demos:latest rmf:latest
 
-FROM ros:galactic-ros-base
+# FROM ros:galactic-ros-base
 
-RUN  apt update &&\
-  apt install -y wget &&\
-  sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb_release -cs` main" > /etc/apt/sources.list.d/gazebo-stable.list' &&\
-  wget https://packages.osrfoundation.org/gazebo.key -O - | apt-key add - &&\
-  apt install -y ros-galactic-rmf-demos-gz
-
-# RUN  apt-get update \
-#   && apt-get install -y ros-galactic-rmw-cyclonedds-cpp \
-#     python3-vcstool \
-#   && rm -rf /var/lib/apt/lists/*
+# RUN  apt update &&\
+#   apt install -y wget &&\
+#   sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb_release -cs` main" > /etc/apt/sources.list.d/gazebo-stable.list' &&\
+#   wget https://packages.osrfoundation.org/gazebo.key -O - | apt-key add - &&\
+#   apt install -y ros-galactic-rmf-demos-gz
 
 RUN  apt-get update \
-  && apt-get install -y python3-vcstool \
+  && apt-get install -y ros-foxy-rmw-cyclonedds-cpp \
+    python3-vcstool \
   && rm -rf /var/lib/apt/lists/*
+
+# RUN  apt-get update \
+#   && apt-get install -y python3-vcstool \
+#   && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /magni_ws/src
 WORKDIR /magni_ws 

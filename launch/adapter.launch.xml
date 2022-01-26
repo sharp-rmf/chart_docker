@@ -16,7 +16,7 @@
   <include file="$(find-pkg-share rmf_demos)/include/adapters/tinyRobot_adapter.launch.xml">
     <arg name="fleet_name" value="i2r" />
     <arg name="use_sim_time" value="$(var use_sim_time)" />
-    <arg name="nav_graph_file" value="$(find-pkg-share sutd_maps)/maps/chart/nav_graphs/0.yaml" />
+    <arg name="nav_graph_file" value="$(find-pkg-share rmf_demos)/maps/chart/nav_graphs/0.yaml" />
     <arg name="finishing_request" value="nothing" />
   </include>
 

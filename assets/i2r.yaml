@@ -1,0 +1,18 @@
+# This docking config file provides the mock docker a series of known paths which
+# the cleaner robot will follow during a docking (aka cleaning) process. 
+#   Example:  Destination: "CLEANZONE" ;  The path here is the trajactory 
+#             which starts from "CLEANZONE_start" to "CLEANZONE"
+
+tinyRobot:
+  zone_1: 
+    level_name: "L1"
+    path: [ [11.5460205078125, -6.996636867523193, 0.0],
+            [3.5460205078125, -6.996636867523193, 0.0],
+            # [116.2, -17.44, 0.0],
+            # [116.2, -26.60, 1.57],
+            # [110.6, -26.60, 3.14],
+            # [110.6, -17.44, 1.57],
+            # [105.9, -17.44, 0.0],
+            # [105.9, -32.1, 0.0],
+            [3.5460205078125, -6.996636867523193, 0.0],
+            [11.5460205078125, -6.996636867523193, 0.0] ]

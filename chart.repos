@@ -3,3 +3,15 @@ repositories:
     type: git
     url: https://github.com/open-rmf/free_fleet.git
     version: main
+  chart_docker:
+    type: git
+    url: https://github.com/sharp-rmf/chart_docker.git
+    version: main
+  rmw_cyclonedds:
+    type: git
+    url: https://github.com/ros2/rmw_cyclonedds
+    version: main
+  cyclonedds:
+    type: git
+    url: https://github.com/eclipse-cyclonedds/cyclonedds
+    version: main

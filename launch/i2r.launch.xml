@@ -6,16 +6,16 @@
   <arg name="failover_mode" default="false"/>
 
   <!-- Common launch -->
-  <include file="$(find-pkg-share docking_adapter)/adapter.launch.xml">
+  <include file="$(find-pkg-share chart_docker)/adapter.launch.xml">
     <arg name="use_sim_time" value="$(var use_sim_time)"/>
     <arg name="failover_mode" value="$(var failover_mode)"/>
   </include>
 
   <!-- Simulation launch -->
-  <include file="$(find-pkg-share docking_adapter)/sim.launch.xml">
-    <arg name="map_package" value="docking_adapter"/>
+  <!-- <include file="$(find-pkg-share chart_docker)/simulation.launch.xml">
+    <arg name="map_package" value="chart_docker"/>
     <arg name="map_name" value="i2r" />
     <arg name="gazebo_version" value="$(var gazebo_version)" />
-  </include>
+  </include> -->
 
 </launch>

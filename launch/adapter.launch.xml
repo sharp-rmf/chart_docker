@@ -1,0 +1,57 @@
+<?xml version='1.0'?>
+
+<launch>
+  <arg name="use_sim_time" default="false" />
+  <arg name="failover_mode" default="false" />
+
+  <!-- Common launch -->
+  <include file="$(find-pkg-share rmf_demos)/common.launch.xml">
+    <arg name="use_sim_time" value="$(var use_sim_time)" />
+    <arg name="viz_config_file" value="$(find-pkg-share rmf_demos)/include/office/office.rviz" />
+    <arg name="config_file" value="$(find-pkg-share chart_docker)/i2r/i2r.building.yaml" />
+    <arg name="dashboard_config_file" value="$(find-pkg-share chart_docker)/dashboard_config.json" />
+  </include>
+
+  <!-- i2r fleet adapter -->
+  <include file="$(find-pkg-share rmf_demos)/include/adapters/tinyRobot_adapter.launch.xml">
+    <arg name="fleet_name" value="i2r" />
+    <arg name="use_sim_time" value="$(var use_sim_time)" />
+    <arg name="nav_graph_file" value="$(find-pkg-share sutd_maps)/maps/chart/nav_graphs/0.yaml" />
+    <arg name="finishing_request" value="nothing" />
+  </include>
+
+  <!-- i2r ff server -->
+  <include file="$(find-pkg-share sutd_launch)/include/i2r_free_fleet_server.launch.xml">
+    <arg name="fleet_name" value="i2r" />
+    <arg name="dds_domain" value="9" />
+    <arg name="translation_x" value="30.12" />
+    <arg name="translation_y" value="-22.0" />
+    <arg name="rotation" value="3.14" />
+    <arg name="scale" value="0.977" />
+  </include>
+
+  <!-- cleanerBotA fleet adapter and robot state aggregator needed for the slotcar_plugin -->
+  <!-- <group>
+    <let name="fleet_name" value="tinyRobot"/>
+    <include file="$(find-pkg-share rmf_demos)/include/adapters/tinyRobot_adapter.launch.xml">
+      <arg name="fleet_name" value="$(var fleet_name)"/>
+      <arg name="use_sim_time" value="$(var use_sim_time)"/>
+      <arg name="nav_graph_file" value="$(find-pkg-share chart_docker)/maps/i2r/nav_graphs/0.yaml" />
+    </include>
+    <include file="$(find-pkg-share rmf_fleet_adapter)/robot_state_aggregator.launch.xml">
+      <arg name="robot_prefix" value="$(var fleet_name)"/>
+      <arg name="fleet_name" value="$(var fleet_name)"/>
+      <arg name="use_sim_time" value="$(var use_sim_time)"/>
+      <arg name="failover_mode" value="$(var failover_mode)"/>
+    </include>
+  </group> -->
+
+  <!-- Mock Docker Node, to provide Fleet Adapter fix cleaning task paths -->
+  <!-- <group>
+    <let name="docking_config_file" value="$(find-pkg-share chart_docker)/i2r.yaml"/>
+    <node pkg="rmf_demos_tasks" exec="mock_docker" args="-c $(var docking_config_file)">
+      <param name="use_sim_time" value="$(var use_sim_time)"/>
+    </node>
+  </group> -->
+
+</launch>

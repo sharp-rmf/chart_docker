@@ -16,19 +16,19 @@
   <include file="$(find-pkg-share rmf_demos)/include/adapters/tinyRobot_adapter.launch.xml">
     <arg name="fleet_name" value="i2r" />
     <arg name="use_sim_time" value="$(var use_sim_time)" />
-    <arg name="nav_graph_file" value="$(find-pkg-share rmf_demos)/maps/chart/nav_graphs/0.yaml" />
+    <arg name="nav_graph_file" value="$(find-pkg-share chart_docker)/maps/i2r/nav_graphs/0.yaml" />
     <arg name="finishing_request" value="nothing" />
   </include>
 
   <!-- i2r ff server -->
-  <include file="$(find-pkg-share chart_docker)/i2r_free_fleet_server.launch.xml">
+  <!-- <include file="$(find-pkg-share chart_docker)/i2r_free_fleet_server.launch.xml">
     <arg name="fleet_name" value="i2r" />
     <arg name="dds_domain" value="9" />
     <arg name="translation_x" value="30.12" />
     <arg name="translation_y" value="-22.0" />
     <arg name="rotation" value="3.14" />
     <arg name="scale" value="0.977" />
-  </include>
+  </include> -->
 
   <!-- cleanerBotA fleet adapter and robot state aggregator needed for the slotcar_plugin -->
   <!-- <group>

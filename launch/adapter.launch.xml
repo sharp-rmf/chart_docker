@@ -21,7 +21,7 @@
   </include>
 
   <!-- i2r ff server -->
-  <include file="$(find-pkg-share sutd_launch)/include/i2r_free_fleet_server.launch.xml">
+  <include file="$(find-pkg-share chart_docker)/include/i2r_free_fleet_server.launch.xml">
     <arg name="fleet_name" value="i2r" />
     <arg name="dds_domain" value="9" />
     <arg name="translation_x" value="30.12" />

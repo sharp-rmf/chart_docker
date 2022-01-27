@@ -2,6 +2,6 @@
 
 <launch>
 
-  <executable cmd="ros2 run rmf_demos_tasks dispatch_loop -s glass_door -f dock_point -n 1" output="both"/>
+  <executable cmd="ros2 run rmf_demos_tasks dispatch_loop -s pt1 -f dock_point -n 1" output="both"/>
 
 </launch>

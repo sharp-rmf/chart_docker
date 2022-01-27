@@ -2,7 +2,7 @@
 
 <launch>
   <arg name="gazebo_version" default="11"/>
-  <arg name="use_sim_time" default="true"/>
+  <arg name="use_sim_time" default="false"/>
   <arg name="failover_mode" default="false"/>
 
   <!-- Common launch -->

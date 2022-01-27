@@ -16,7 +16,7 @@
   <include file="$(find-pkg-share rmf_demos)/include/adapters/tinyRobot_adapter.launch.xml">
     <arg name="fleet_name" value="i2r" />
     <arg name="use_sim_time" value="$(var use_sim_time)" />
-    <arg name="nav_graph_file" value="$(find-pkg-share chart_docker)/maps/i2r/nav_graphs/0.yaml" />
+    <arg name="nav_graph_file" value="$(find-pkg-share chart_docker)/maps/chart/nav_graphs/0.yaml" />
   </include>
 
   <!-- i2r free fleet server -->

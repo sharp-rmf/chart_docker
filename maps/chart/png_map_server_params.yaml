@@ -1,0 +1,3 @@
+/chart/map_server:
+    ros__parameters:
+        yaml_filename: "/home/bnhan/dev/rmf_ws/src/rmf_dp2/rmf_dp2_maps/chart/tar_ros2/maps/chart.yaml"

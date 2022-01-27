@@ -1,0 +1,6 @@
+image: chart_without_too_much_stuff.png 
+resolution:  0.012719561567487794
+origin: [0.00000, -32.98000, 0.000000]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.196

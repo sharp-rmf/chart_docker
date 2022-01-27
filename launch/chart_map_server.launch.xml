@@ -1,0 +1,22 @@
+<?xml version='1.0'?>
+
+<launch>
+
+  <!-- Building Map  -->
+  <group>
+    <node pkg="rmf_building_map_tools" exec="building_map_server" args="$(find-pkg-share chart_docker)/chart/chart.building.yaml">
+      <param name="use_sim_time" value="true" />
+    </node>
+  </group>
+
+  <!-- Visualizer -->
+  <group>
+    <include file="$(find-pkg-share rmf_visualization)/visualization.launch.xml">
+      <arg name="use_sim_time" value="true" />
+      <arg name="map_name" value="L1" />
+      <arg name="viz_config_file" value="$(find-pkg-share chart_docker)/include/office.rviz"/>
+      <arg name="headless" value="false" />
+    </include>
+  </group>
+
+</launch>

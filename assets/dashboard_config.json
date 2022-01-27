@@ -14,14 +14,9 @@
     },
     "Loop": {
       "places": [
-        "coe",
-        "pantry",
-        "lounge",
-        "supplies",
-        "hardware_2",
-        "tinyRobot1_charger",
-        "tinyRobot2_charger",
-        "zone_1"
+        "glass_door",
+        "dock_point",
+        "in_front_of_lift"
       ]
     },
     "Clean": {

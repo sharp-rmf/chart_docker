@@ -3,11 +3,11 @@
 <launch>
   
   <arg name="fleet_name" default ="magni" description="Fill in the name of the fleet here"/>
-  <arg name="dds_domain" default ="6" description="Please match this with the free fleet server's dds domain"/>
-  <arg name="translation_x" default="30.12"/>
-  <arg name="translation_y" default="-22.0"/>
-  <arg name="rotation" default="3.14"/>
-  <arg name="scale" default="0.977"/>
+  <arg name="dds_domain" default ="9" description="Please match this with the free fleet server's dds domain"/>
+  <arg name="translation_x" default="-17.500546843513703"/>
+  <arg name="translation_y" default="19.996346223524732"/>
+  <arg name="rotation"      default="0.04886799016635764"/>
+  <arg name="scale"         default="0.9531304378881906"/>
 
   <node pkg="free_fleet_server_ros2"
       exec="free_fleet_server_ros2"
